@@ -1,0 +1,1 @@
+This task is on mastering js DOM given by my MERN stack course

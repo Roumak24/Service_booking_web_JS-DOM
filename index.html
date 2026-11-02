@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundry Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="logo">Logo</div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Contact Us</a>
+      <a href="#">About Us</a>
+    </div>
+
+    <div class="user-box">
+      <span class="username">Username</span>
+      <button class="logout-btn" id="logoutBtn">&#x2192;</button>
+    </div>
+  </nav>
+
+  <!-- MAIN AREA: left section + right section -->
+  <div class="container">
+
+    <!-- LEFT SECTION -->
+    <div class="left">
+
+      <!-- Added items box -->
+      <div class="box">
+        <h2 class="box-title">Added Items</h2>
+
+        <div class="table-head">
+          <span class="col-no">S.No</span>
+          <span class="col-name">Service Name</span>
+          <span class="col-price">Price</span>
+        </div>
+
+        <!-- The JavaScript fills this area -->
+        <div class="table-body" id="itemList">
+          <div class="empty">
+            <div class="empty-icon">i</div>
+            <p class="empty-title">No Items Added</p>
+            <p class="empty-text">Add items to the cart from the services bar</p>
+          </div>
+        </div>
+
+        <div class="total-row">
+          <span>Total Amount</span>
+          <span id="totalAmount">₹ 0</span>
+        </div>
+      </div>
+
+      <!-- Book Now form (second div) -->
+      <div class="box book-box">
+        <h3>Book Now</h3>
+
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="John Doe">
+
+        <div class="two-columns">
+          <div>
+            <label for="email">Email ID</label>
+            <input type="email" id="email" placeholder="mail@gmail.com">
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" placeholder="000000000">
+          </div>
+        </div>
+
+        <button class="book-btn" id="bookBtn" disabled>Book now</button>
+        <p class="message" id="message"></p>
+      </div>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="right box">
+      <h1>Browse Our Services</h1>
+      <p class="description">
+        Click on the add to cart button to add the services to your cart or press skip
+      </p>
+
+      <hr>
+
+      <!-- Image, name and price change with JavaScript -->
+      <img id="serviceImage" class="service-image" src="images/dry.jpg" alt="Service">
+
+      <div class="service-info">
+        <span class="service-name" id="serviceName">Dry Cleaning</span>
+        <span class="service-price" id="servicePrice">₹200.00</span>
+      </div>
+
+      <div class="buttons">
+        <button class="skip-btn" id="skipBtn">Skip Item ⊖</button>
+        <button class="add-btn" id="addBtn">Add Item ⊕</button>
+      </div>
+
+      <hr>
+
+      <p class="hint">ⓘ Add the items to the cart and book now</p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
